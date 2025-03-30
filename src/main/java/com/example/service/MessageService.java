@@ -1,4 +1,8 @@
 package com.example.service;
 
-public class MessageService {
+import org.springframework.stereotype.Service;
+
+@Service
+public class MessageService
+{
 }
