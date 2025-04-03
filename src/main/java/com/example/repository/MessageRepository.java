@@ -5,9 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.entity.Message;
 import java.util.List;
 
-public interface MessageRepository extends JpaRepository<Message, Long>
-{
-    Message findMessageByMessageId(Integer messageId);
-    Integer deleteByMessageId(Integer messageId);
-    List<Message> findMessagesByPostedBy(Integer accountId);
+public interface MessageRepository extends JpaRepository<Message, Integer> {
+    List<Message> findByPostedBy(int id);
 }
